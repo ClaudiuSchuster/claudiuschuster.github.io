@@ -1194,6 +1194,57 @@ html[data-theme="prismatic"] .theme-toggle-name-prismatic {
   transform: translate(3px, -3px);
 }
 
+.mirror-rail {
+  display: flex;
+  min-height: 3.8rem;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  margin-top: 1.35rem;
+  padding: .8rem 1.1rem;
+  border: 1px dashed var(--line);
+  border-radius: .85rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: .63rem;
+  letter-spacing: .04em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mirror-rail-pulse {
+  width: .45rem;
+  height: .45rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 .7rem var(--cyan);
+}
+
+.mirror-rail a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.mirror-rail a:hover {
+  color: var(--peach);
+}
+
+.mirror-rail a span:last-child {
+  display: inline-block;
+  margin-left: .35rem;
+  color: var(--peach);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 0;
+  transition: transform .2s ease;
+}
+
+.mirror-rail a:hover span:last-child {
+  transform: translate(2px, -2px);
+}
+
 .site-footer {
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr;
@@ -1382,6 +1433,7 @@ html[data-theme="prismatic"] .section-heading,
 html[data-theme="prismatic"] .tile,
 html[data-theme="prismatic"] .tile-art,
 html[data-theme="prismatic"] .tile-footer,
+html[data-theme="prismatic"] .mirror-rail,
 html[data-theme="prismatic"] .site-footer {
   border-color: var(--line-strong);
 }
@@ -1395,6 +1447,13 @@ html[data-theme="prismatic"] .tile {
 html[data-theme="prismatic"] .tile:hover {
   box-shadow: 4px 4px 0 var(--ink);
   transform: translate(4px, 4px) rotate(-.25deg);
+}
+
+html[data-theme="prismatic"] .mirror-rail {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: .55rem;
+  box-shadow: 4px 4px 0 var(--ink);
 }
 
 html[data-theme="prismatic"] .tile-art::before {
@@ -1512,6 +1571,14 @@ html[data-theme="prismatic"] .site-footer p:nth-child(2) {
 
   .tile {
     min-height: 30rem;
+  }
+
+  .mirror-rail {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .45rem;
+    padding: 1rem;
+    text-align: left;
   }
 
   .site-footer {
