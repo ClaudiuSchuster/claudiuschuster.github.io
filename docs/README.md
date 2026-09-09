@@ -62,6 +62,8 @@ metadata, including dimensions, MIME type, alt text and the
 - [`../styles.css`](../styles.css): both themes, responsive layout and reduced-motion styles
 - [`../script.js`](../script.js): theme/language controls and lightweight observatory motion
 - [`../assets/social-preview.png`](../assets/social-preview.png): repository and link-preview artwork
+- [`../favicon.svg`](../favicon.svg) and [`../favicon.png`](../favicon.png): prismatic open-signal favicon and PNG fallback
+- [`../.github/FUNDING.yml`](../.github/FUNDING.yml): GitHub Sponsors receiver configuration
 - [`../README.md`](../README.md): public showcase entry point
 - [`../.github/`](../.github/): repository automation, when present
 
