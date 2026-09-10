@@ -38,6 +38,8 @@ git diff --check
 test "$(identify -format '%wx%h' assets/social-preview.png)" = '1200x630'
 test "$(identify -format '%wx%h ' favicon.ico | sed 's/ $//')" = '16x16 32x32 48x48 64x64'
 curl --fail --silent --show-error http://127.0.0.1:4190/index.html >/dev/null
+python3 -m json.tool site.webmanifest >/dev/null
+curl --fail --silent --show-error http://127.0.0.1:4190/site.webmanifest | python3 -m json.tool >/dev/null
 ```
 
 The page is served directly from the committed root files; there is no build
@@ -62,6 +64,7 @@ metadata, including dimensions, MIME type, alt text and the
 - [`../index.html`](../index.html): complete one-page markup and social metadata
 - [`../styles.css`](../styles.css): both themes, responsive layout and reduced-motion styles
 - [`../script.js`](../script.js): theme/language controls and lightweight observatory motion
+- [`../site.webmanifest`](../site.webmanifest): GitHub-Pages-compatible install metadata using the existing root icons
 - [`../assets/social-preview.png`](../assets/social-preview.png): repository and link-preview artwork
 - [`../favicon.ico`](../favicon.ico), [`../favicon.svg`](../favicon.svg) and [`../favicon.png`](../favicon.png): stable ICO fallback, modern SVG and PNG fallback for the prismatic open-signal icon
 - [`../.github/FUNDING.yml`](../.github/FUNDING.yml): GitHub Sponsors receiver configuration
@@ -75,6 +78,11 @@ GitHub Pages publishes the repository root from the `main` branch at
 point to that root user page. The personal site remains available at
 <https://claudiuschuster.de/> and its separate project-page mirror at
 <https://claudiuschuster.github.io/claudiuschuster.de/>.
+
+The root `site.webmanifest` is a plain static asset in that same Pages source;
+GitHub Pages serves it without `.htaccess` or a custom deployment step. The
+manifest keeps relative `id`, `start_url` and `scope` values so the source also
+remains valid when viewed from a repository subpath.
 
 ## Documentation map
 
