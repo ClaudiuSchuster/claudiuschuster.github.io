@@ -36,6 +36,7 @@ Run the lightweight checks that match the dependency-free repository:
 ```sh
 git diff --check
 test "$(identify -format '%wx%h' assets/social-preview.png)" = '1200x630'
+test "$(identify -format '%wx%h ' favicon.ico | sed 's/ $//')" = '16x16 32x32 48x48 64x64'
 curl --fail --silent --show-error http://127.0.0.1:4190/index.html >/dev/null
 ```
 
@@ -62,7 +63,7 @@ metadata, including dimensions, MIME type, alt text and the
 - [`../styles.css`](../styles.css): both themes, responsive layout and reduced-motion styles
 - [`../script.js`](../script.js): theme/language controls and lightweight observatory motion
 - [`../assets/social-preview.png`](../assets/social-preview.png): repository and link-preview artwork
-- [`../favicon.svg`](../favicon.svg) and [`../favicon.png`](../favicon.png): prismatic open-signal favicon and PNG fallback
+- [`../favicon.ico`](../favicon.ico), [`../favicon.svg`](../favicon.svg) and [`../favicon.png`](../favicon.png): stable ICO fallback, modern SVG and PNG fallback for the prismatic open-signal icon
 - [`../.github/FUNDING.yml`](../.github/FUNDING.yml): GitHub Sponsors receiver configuration
 - [`../README.md`](../README.md): public showcase entry point
 - [`../.github/`](../.github/): repository automation, when present
