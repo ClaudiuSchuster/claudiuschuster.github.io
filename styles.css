@@ -1221,6 +1221,13 @@ html[data-theme="prismatic"] .theme-toggle-name-prismatic {
   box-shadow: 0 0 .7rem var(--cyan);
 }
 
+.mirror-rail-logo {
+  height: 1.6rem;
+  width: auto;
+  flex: 0 0 auto;
+  border-radius: .2rem;
+}
+
 .mirror-rail a {
   color: var(--ink);
   text-decoration: none;
@@ -1454,6 +1461,12 @@ html[data-theme="prismatic"] .mirror-rail {
   border-style: solid;
   border-radius: .55rem;
   box-shadow: 4px 4px 0 var(--ink);
+}
+
+/* Light wordmark for the dark atelier default, dark wordmark for the bright
+   prismatic workshop — both variants come from the laboratory asset repo. */
+html[data-theme="prismatic"] .mirror-rail-logo {
+  content: url("https://oss-oo.io/OSS-OO/oss-oo/raw/branch/main/menu-logos/oss-oo-logo-horizontal_bright.svg");
 }
 
 html[data-theme="prismatic"] .tile-art::before {
