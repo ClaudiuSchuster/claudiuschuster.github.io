@@ -75,9 +75,9 @@ metadata, including dimensions, MIME type, alt text and the
 
 GitHub Pages publishes the repository root from the `main` branch at
 <https://claudiuschuster.github.io/>. The canonical URL and social metadata
-point to that root user page. The personal site remains available at
-<https://claudiuschuster.de/> and its separate project-page mirror at
-<https://claudiuschuster.github.io/claudiuschuster.de/>.
+point to that root user page. The personal site is published from the oss-oo
+laboratory and lives at <https://claudiuschuster.de/>; its repository page in
+the laboratory is <https://oss-oo.io/ClaudiuSchuster/claudiuschuster.de>.
 
 The root `site.webmanifest` is a plain static asset in that same Pages source;
 GitHub Pages serves it without `.htaccess` or a custom deployment step. The
