@@ -1719,4 +1719,4 @@ html[data-theme="prismatic"] .site-footer p:nth-child(2) {
   }
 }
 .lab-link-icon{width:24px;height:24px;vertical-align:-7px;margin-right:6px}
-html[data-theme="prismatic"] .lab-link-icon{background:#0a0a14;border-radius:7px;padding:3px;box-sizing:border-box}
+html[data-theme="prismatic"] .lab-link-icon{width:28px;height:28px;background:#0a0a14;border-radius:6px;padding:2px;box-sizing:border-box;vertical-align:-9px}
